@@ -1,0 +1,36 @@
+@mixin footer {
+  height: 75px;
+  line-height: 75px;
+  overflow: auto;
+}
+
+@mixin footer__left {
+  float: left;
+}
+
+@mixin footer__right {
+  float: right;
+}
+
+@mixin footer__icon {
+  display: block;
+  width: 281px;
+  height: 75px;
+  background-image: url('../img/rsymuk.png');
+  background-size: 281px 75px;
+  background-repeat: no-repeat;
+}
+
+@mixin footer__link {
+  display: block;
+  margin: 0px 10px;
+  float: left;
+
+  &:first-child {
+    margin-left: 0px;
+  }
+
+  &:last-child {
+    margin-right: 0px;
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "uoc-ieee-symposium-website-2018-2",
+  "version": "1.0.0",
+  "description": "UoC IEEE Symposium Website 2018",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "node-sass": "^3.6.0"
+  },
+  "scripts": {
+    "clean": "rm -rf build && mkdir -p build",
+    "static": "cp -r static/* build",
+    "sass": "node-sass sass/style.scss --output build/css/",
+    "js": "cp -r js build/js/",
+    "prebuild": "npm run clean",
+    "build": "npm run static && npm run sass && npm run js",
+    "preserve": "npm run build",
+    "live": "rsync -av build/ peter@pbutcher.uk:/var/www/researchsymposium/hosted/ieeeyp/"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

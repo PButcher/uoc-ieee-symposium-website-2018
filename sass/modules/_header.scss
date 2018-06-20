@@ -1,0 +1,64 @@
+@mixin header {
+  overflow: auto;
+  padding: 15px 0px;
+}
+
+@mixin header__logo {
+  width: $w-logo;
+  height: $h-logo;
+  background-image: url('../img/logo.jpg');
+  background-size: $w-logo;
+  background-repeat: no-repeat;
+  float: left;
+}
+
+@mixin header__nav {
+  height: $h-logo;
+  line-height: $h-logo;
+  float: right;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: block;
+      float: left;
+      margin-left: 5px;
+      margin-right: 5px;
+
+      &:first-child {
+        margin-left: 0px;
+      }
+
+      &:last-child {
+        margin-right: 0px;
+      }
+    }
+  }
+
+  a {
+    padding: 10px;
+    color: $c-text;
+    text-decoration: none;
+    border: solid 2px rgba(0,0,0,0);
+    border-radius: 4px;
+
+    &.header__nav-cta {
+      @include header__nav-cta;
+    }
+
+    &:hover {
+      background-color: $c-nav-button;
+    }
+  }
+}
+
+@mixin header__nav-cta {
+  border: solid 2px rgba(0,0,0,0.1);
+
+  &:hover {
+    border: solid 2px rgba(0,0,0,0);
+  }
+}

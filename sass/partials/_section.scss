@@ -1,0 +1,16 @@
+@import '../modules/section';
+
+section {
+  @include section;
+
+  .section {
+
+    &__title {
+      @include section__title;
+    }
+
+    &__tabulated {
+      @include section__tabulated;
+    }
+  }
+}

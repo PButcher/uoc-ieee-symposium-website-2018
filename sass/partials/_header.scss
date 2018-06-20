@@ -1,0 +1,17 @@
+@import '../modules/header';
+
+header {
+
+  @include header;
+
+  .header {
+
+    &__logo {
+      @include header__logo;
+    }
+
+    &__nav {
+      @include header__nav;
+    }
+  }
+}

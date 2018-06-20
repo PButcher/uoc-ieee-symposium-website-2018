@@ -1,0 +1,25 @@
+@import '../modules/footer';
+
+footer {
+
+  @include footer;
+
+  .footer {
+
+    &__left {
+      @include footer__left;
+    }
+
+    &__icon {
+      @include footer__icon;
+    }
+
+    &__right {
+      @include footer__right;
+    }
+    
+    &__link {
+      @include footer__link;
+    }
+  }
+}

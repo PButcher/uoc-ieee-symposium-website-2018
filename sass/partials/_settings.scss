@@ -1,0 +1,15 @@
+// General - Colours
+$c-background: #FFF;
+$c-main-text: #151515;
+
+// General - Dimensions
+$w-wrapper: 800px;
+
+// Logo
+$s-logo: 0.75;
+$w-logo: calc(400px * #{$s-logo});
+$h-logo: calc(76px * #{$s-logo});
+
+// Nav
+$c-text: #151515;
+$c-nav-button: rgba(0,0,0,0.05);

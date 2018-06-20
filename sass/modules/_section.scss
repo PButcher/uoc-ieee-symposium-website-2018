@@ -1,0 +1,54 @@
+@mixin section {
+  margin-top: 75px;
+  padding-bottom: 59px;
+  border-bottom: solid 1px rgba(0,0,0,0.1);
+
+  &:last-child {
+    border: none;
+  }
+
+  h3 {
+    margin-bottom: 5px;
+  }
+
+  h3 + p {
+    margin-top: 0;
+  }
+}
+
+@mixin section__title {
+
+  h1 {
+    margin-bottom: 0px;
+  }
+
+  h2 {
+    margin-bottom: 0px;
+  }
+
+  p {
+    margin-top: 5px;
+    font-style: italic;
+    font-weight: 300;
+    color: rgba(0,0,0,0.5);
+  }
+}
+
+@mixin section__tabulated {
+  h3 {
+    margin-bottom: 0px;
+  }
+
+  h4 {
+    margin-top: 0px;
+    font-style: italic;
+  }
+
+  th {
+    text-align: left;
+  }
+
+  td:nth-child(odd) {
+    padding-right: 50px;
+  }
+}

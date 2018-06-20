@@ -1,0 +1,21 @@
+html, body {
+  background-color: $c-background;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  color: $c-main-text;
+  margin: 0;
+  text-align: justify;
+}
+
+.wrapper {
+  width: $w-wrapper;
+  margin: 25px auto;
+}
+
+a {
+  color: #707070;
+
+  &:hover {
+    color: #A0A0A0;
+  }
+}
