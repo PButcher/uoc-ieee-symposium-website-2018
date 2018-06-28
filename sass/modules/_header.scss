@@ -1,6 +1,10 @@
 @mixin header {
   overflow: auto;
   padding: 15px 0px;
+
+  @media(max-width: $m-nav) {
+    padding: 0px;
+  }
 }
 
 @mixin header__logo {
@@ -10,55 +14,222 @@
   background-size: $w-logo;
   background-repeat: no-repeat;
   float: left;
+
+  @media(max-width: $m-nav) {
+    width: calc(#{$w-logo / 1.25});
+    height: calc(#{$h-logo / 1.25});
+    background-size: calc(#{$w-logo / 1.25});
+  }
 }
 
 @mixin header__nav {
-  height: $h-logo;
-  line-height: $h-logo;
   float: right;
+  box-sizing: border-box;
 
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  a, label {
+    height: 39px;
+    line-height: 39px;
+    display: block;
+    box-sizing: border-box;
+    float: left;
+    margin: 9px 5px;
 
-    li {
-      display: block;
-      float: left;
-      margin-left: 5px;
-      margin-right: 5px;
-
-      &:first-child {
-        margin-left: 0px;
-      }
-
-      &:last-child {
-        margin-right: 0px;
-      }
+    &:first-child {
+      margin-left: 0px;
     }
-  }
 
-  a {
-    padding: 10px;
+    &:last-child {
+      margin-right: 0px;
+    }
+
+    padding: 0px 10px;
     color: $c-text;
     text-decoration: none;
-    border: solid 2px rgba(0,0,0,0);
     border-radius: 4px;
-
-    &.header__nav-cta {
-      @include header__nav-cta;
-    }
 
     &:hover {
       background-color: $c-nav-button;
     }
+
+    @media(max-width: $m-nav) {
+      margin: 3px 5px;
+    }
+  }
+
+  @media(max-width: $m-nav) {
+    display: none;
   }
 }
 
-@mixin header__nav-cta {
-  border: solid 2px rgba(0,0,0,0.1);
+@mixin header__nav-mobile {
+  @include header__nav;
+
+
+  @media(max-width: $m-nav) {
+    display: block;
+
+    a, label {
+      text-align: center;
+
+      i {
+        margin-right: 0px;
+        width: 20px;
+      }
+    }
+  }
+}
+
+@mixin burger__checkbox {
+  display: none;
+
+  @media(max-width: $m-nav) {
+    &:checked + .drawer {
+      left: 0px;
+      transition: left .25s ease-in-out;
+    }
+  }
+}
+
+@mixin burger__label {
+  cursor: pointer;
+
+  &.label {
+    display: none;
+  }
+
+  @media(max-width: $m-nav) {
+   &.label {
+      display: block;
+    }
+  }
+}
+
+@mixin drawer {
+  z-index: 1;
+  position: fixed;
+  width: $w-drawer;
+  top: 0px;
+  left: -305px;
+  transition: left .25s ease-in-out;
+  height: 100%;
+  overflow-y: scroll;
+  background-color: #FFF;
+  overflow: visible;
+  overflow-x: hidden;
+  overflow-y: auto;
+  box-shadow: 10px 0px 30px -10px rgba(0,0,0,0.5);
+
+  a {
+    color: #000;
+    float: none;
+
+  }
+
+  @media(max-width: $m-nav) {
+
+  }
+}
+
+@mixin drawer__header {
+  display: block;
+  width: $w-drawer;
+  height: 100px;
+  background:
+    url('../img/logo.jpg'),
+    #FFF
+  ;
+  background-size:
+    #{(400 * 0.75) / 1.5}px #{(76 * 0.75) / 1.5}px,
+    $w-drawer 200px
+  ;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+@mixin drawer__menu {
+  border-top: solid 1px #303030;
+
+  &:nth-child(2) {
+    border-top: 0;
+  }
+
+  h2 {
+    height: 64px;
+    line-height: 64px;
+    font-weight: 300;
+    margin: 0px;
+    padding-left: 40px;
+    color: #FF0000;
+  }
+}
+
+@mixin drawer__menu-item {
+  display: block;
+  box-sizing: border-box;
+  padding: 18px 18px 18px 40px;
+  color: #FF00FF;
+  width: 100%;
+  text-decoration: none;
 
   &:hover {
-    border: solid 2px rgba(0,0,0,0);
+    background-color: #00FF00;
   }
 }
+
+@mixin drawer__menu-item-icon {
+  width: 24px;
+  height: 24px;
+  font-size: 24px;
+  padding-right: 16px;
+  color: #FFFF00;
+}
+
+@mixin drawer__menu-item-text {
+  display: inline-block;
+  height: 24px;
+  line-height: 24px;
+}
+
+@mixin webkit-scrollbar {
+
+  background-color: transparent;
+  opacity: 0;
+
+  &:hover {
+    opacity: 1;
+    background-color: rgba(255,255,255,.1);
+  }
+
+  &:horizontal {
+    height: 8px;
+  }
+
+  &:vertical {
+    width: 8px;
+  }
+}
+
+@mixin webkit-scrollbar-button {
+  display: none;
+}
+
+@mixin webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+@mixin webkit-scrollbar-track-piece {}
+
+@mixin webkit-scrollbar-thumb {
+  background-color: rgba(255,255,255,.1);
+  border-radius: 0px;
+
+  &:hover {
+    background-color: rgba(255,255,255,.3);
+  }
+}
+
+@mixin webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+@mixin webkit-resizer {}

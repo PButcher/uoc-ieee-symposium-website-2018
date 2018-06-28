@@ -2,14 +2,26 @@
   height: 75px;
   line-height: 75px;
   overflow: auto;
+
+  @media(max-width: $m-nav) {
+    height: 150px;
+  }
 }
 
 @mixin footer__left {
   float: left;
+
+  @media(max-width: $m-nav) {
+    float: none
+  }
 }
 
 @mixin footer__right {
   float: right;
+
+  @media(max-width: $m-nav) {
+    float: none;
+  }
 }
 
 @mixin footer__icon {

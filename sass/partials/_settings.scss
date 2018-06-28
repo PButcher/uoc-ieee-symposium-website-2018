@@ -1,9 +1,14 @@
+// Media Queries
+$m-width: 850px;
+$m-nav: 800px;
+
 // General - Colours
 $c-background: #FFF;
 $c-main-text: #151515;
 
 // General - Dimensions
-$w-wrapper: 800px;
+$w-wrapper: 850px;
+$w-wrapper-min: 350px;
 
 // Logo
 $s-logo: 0.75;
@@ -13,3 +18,10 @@ $h-logo: calc(76px * #{$s-logo});
 // Nav
 $c-text: #151515;
 $c-nav-button: rgba(0,0,0,0.05);
+
+// Buttons
+$c-button-blue: #006CB5;
+$c-button-blue-hover: #0179CA;
+
+// Drawer
+$w-drawer: 280px;

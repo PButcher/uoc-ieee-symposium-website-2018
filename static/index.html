@@ -2,43 +2,57 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
     <title>IEEEYP UK&I Postgraduate STEM Research Symposium</title>
     <link rel="shortcut icon" href="img/icon.png">
+    <link rel="stylesheet" type="text/css" href="css/fontawesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/fa-light.min.css">
+    <link rel="stylesheet" type="text/css" href="css/fa-brands.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,700" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script defer type="text/javascript" rel="stylesheet" src="js/main.js"></script>
   </head>
   <body>
     <div class="wrapper">
       <header>
         <div class="header__logo"></div>
         <nav class="header__nav">
-          <ul>
-            <li>
-              <a href="#features">Features</a>
-            </li>
-            <li>
-              <a href="#submit">Submit</a>
-            </li>
-            <li>
-              <a href="#schedule">Schedule</a>
-            </li>
-            <li>
-              <a href="#registration">Registration</a>
-            </li>
-          </ul>
+          <a href="#features">Features</a>
+          <a href="#submit">Submit</a>
+          <a href="#schedule">Schedule</a>
+          <a href="#registration">Registration</a>
+        </nav>
+        <nav class="header__nav-mobile">
+          <label class="burger__label label" id="burgerLabel" for="burger"><i class="fal fa-bars"></i></label>
+          <input class="burger__checkbox" id="burger" type="checkbox">
+          <div class="drawer" id="drawer">
+            <div class="drawer__header"></div>
+            <a href="//ieeeyp.researchsymposium.co.uk#features">Features</a>
+            <a href="//ieeeyp.researchsymposium.co.uk#submit">Submit</a>
+            <a href="//ieeeyp.researchsymposium.co.uk#schedule">Schedule</a>
+            <a href="//ieeeyp.researchsymposium.co.uk#registration">Registration</a>
+          </div>
         </nav>
       </header>
 
       <main>
 
+        <!-- Announcement -->
+        <!-- <div class="announcement">
+          <i class="fal fa-bullhorn"></i>
+          <p><strong>Now accepting submissions!</strong></p>
+          <p></p>
+        </div> -->
+
         <!-- Home -->
+        <a name="#home"></a>
         <section>
-          <a name="#home"></a>
           <div class="section__title">
             <h1>IEEE YP UK&I Postgraduate STEM Research Symposium</h1>
-            <p>Hosted by the department of Computer Science, University of Chester</p>
+            <p>Hosted by the Department of Computer Science, University of Chester</p>
           </div>
-          <p>IEEE Young Professionals UK & Ireland and the department of Computer Science at the University of Chester cordially invite you to their inaugural postgraduate research STEM symposium. The symposium will take place at the University of Chester’s Parkgate Road campus from 28th-29th November 2018.</p>
+          <p><a href="http://www.ieeeukiyp.org/">IEEE Young Professionals UK & Ireland</a> and the <a href="https://www.chester.ac.uk/csis">department of Computer Science at the University of Chester</a> cordially invite you to their inaugural postgraduate research STEM symposium. The symposium will take place at the University of Chester’s Parkgate Road campus from 28th-29th November 2018.</p>
           <p>This symposium creates an opportunity for early career researchers, especially postgraduate research students (PhD and MPhil), to present their research and receive feedback, share ideas, network in an environment that allows them to share their challenges and learn from others, learn about relevant research tools and skills, and explore the possibilities of turning their research to enterprise. It is a 2-day event targeting STEM based postgraduate researchers and postdocs, across the country and beyond.</p>
           <p>We are calling for submissions in the following categories:</p>
           <ul>
@@ -47,53 +61,79 @@
             <li>Research to Enterprise Pitches</li>
           </ul>
           <p>It is not necessary to make a submission to attend the symposium.</p>
+          <a class="button button__blue" href="#submit" class="button button__blue"><i class="fal fa-envelope"></i> Submit Your Work</a>
         </section>
 
         <!-- Features -->
+        <a name="features"></a>
         <section>
-          <a name="features"></a>
           <div class="section__title">
-            <h2>Features</h2>
+            <h2><i class="fal fa-list-alt"></i> Features</h2>
             <p>What's happening at the symposium?</p>
           </div>
           <p>The event focuses on research, enterprise and knowledge transfer and will comprise of presentations, workshops, keynotes, pitches, and awards.</p>
-          <h3>Presentations</h3>
-          <p>Participants are invited to submit  papers and posters on their research. The papers will be classified and presented through different tracks. This is not a peer reviewed conference – the idea here is to give participants the opportunity to discuss their research before an unfamiliar audience. A poster session will allow participants to interact with different researchers on their displayed research topics.</p>
-          <h3>Workshops</h3>
-          <p>Experts will deliver talks/training on LaTex, Research Methods, Research Tools, Shut up and Write (this has been hugely successful in helping PhD students in writing up stage), Research to Enterprise (a workshop on how to turn research to enterprise).</p>
-          <h3>Research to Enterprise Pitches</h3>
-          <p>Interested participants are invited to pitch their research to a select panel. The precis of the pitches will be made avialable to sponsoring companies, participants and through the IEEE UK & Ireland Young Professionals’ social media outlets for visibility (for possible sponsorship and collaboration).</p>
-          <h3>Awards</h3>
-          <p>The IEEE UK & Ireland Young Professionals is sponsoring Best Paper, Best Poster, and Best Research to Enterprise Pitch awards.</p>
-          <h3>Reception</h3>
-          <p>An optional reception with drinks and meals, providing a relaxing environment for meet-and-greet and networking. There is additional charge (to be advised) for the reception.</p>
+          <h3><i class="fal fa-user"></i>Presentations</h3>
+          <p>Participants are invited to submit papers and posters on their research. The papers will be classified and presented through different tracks. This is not a peer reviewed conference – the idea here is to give participants the opportunity to discuss their research before an unfamiliar audience. A poster session will allow participants to interact with different researchers on their displayed research topics.</p>
+          <h3><i class="fal fa-wrench"></i>Workshops</h3>
+          <p>Experts will deliver talks/training on:</p>
+          <ul>
+            <li>LaTeX</li>
+            <li>Research Methods</li>
+            <li>Research Tools</li>
+            <li>Shut up and Write (this has been hugely successful in helping PhD students in their writing up stage)</li>
+            <li>Research to Enterprise (a workshop on how to turn research to enterprise)</li>
+          </ul>
+          <h3><i class="fal fa-chalkboard-teacher"></i>Research to Enterprise Pitches</h3>
+          <p>Interested participants are invited to pitch their research to a select panel. The precis of the pitches will be made available to sponsoring companies, participants and through the IEEE UK & Ireland Young Professionals’ social media outlets for visibility (for possible sponsorship and collaboration).</p>
+          <h3><i class="fal fa-award"></i>Awards</h3>
+          <p>The IEEE UK & Ireland Young Professionals is sponsoring awards for:</p>
+          <ul>
+            <li>Best Paper</li>
+            <li>Best Poster</li>
+            <li>Best Research to Enterprise Pitch</li>
+          </ul>
+          <h3><i class="fal fa-utensils"></i>Reception</h3>
+          <p>An optional reception with drinks and meals, providing a relaxing environment for meet-and-greet and networking. There is an additional charge (to be advised) for the reception.</p>
+          <h3><i class="fal fa-users"></i>Panel Discussion</h3>
+          <p>An open discussion session that allows panellists to briefly introduce/discuss their outlined focus areas and to field questions from the participants and also share their experiences and perspectives related to their journeys to their current careers. Focus will include:
+          <ul>
+            <li>Pathways to industry</li>
+            <li>Pathways to academia</li>
+            <li>Becoming an entrepreneur</li>
+            <li><a href="https://www.stem.org.uk/heated/professional-registration">Professional registration</a></li>
+            <li>Benefits of professional body membership</li>
+            <li>Starting MPhil/PhD (by a fresh MPhil/PhD student–to talk about the challenges)</li>
+            <li>Finishing MPhil/PhD (by an MPhil/PhD student in their final stages – to talk about the challenges and what it feels like)</li>
+          </ul>
         </section>
 
         <!-- Submit -->
+        <a name="submit"></a>
         <section>
-          <a name="submit"></a>
           <div class="section__title">
-            <h2>Submit</h2>
-            <p>Submit something to the symposium</p>
+            <h2><i class="fal fa-upload"></i> Submit</h2>
+            <p>Submit your work to the symposium</p>
           </div>
-          <p>To submit something to the symposium, please submit an abstract that briefly outlines the topic of your submission. You need to submit:</p>
+          <p>To submit your work to the symposium, please provide:</p>
           <ul>
             <li>The type of submission you wish to make (poster/paper/pitch)</li>
-            <li>A 200 word abstract. For papers, authors of accepted abstract will be invited to submit a full paper of between 2 to 6 pages.</li>
+            <li>A 200 word abstract that briefly outlines the topic of your submission. For papers, authors of accepted abstracts will be invited to submit a full paper of between 2 to 6 pages.</li>
             <li>3 keywords that best describe your topic area</li>
           </ul>
-          <p>For further enquiries, please contact <a href="mailto:ieeeyp@chester.ac.uk">ieeeyp@chester.ac.uk</a></p>
+          <p><strong>The deadline for abstract submissions is 28th September 2018 at 17:00 UTC+1</strong></p>
+          <a class="button button__blue" href="mailto:ieeeyp@chester.ac.uk?subject=Submission" class="button button__blue"><i class="fal fa-envelope"></i> Submit Your Work</a>
+          <p>For further enquiries, please contact <a href="mailto:ieeeyp@chester.ac.uk?subject=Enquiry">ieeeyp@chester.ac.uk</a></p>
         </section>
 
         <!-- Schedule -->
+        <a name="schedule"></a>
         <section>
-          <a name="schedule"></a>
           <div class="section__title">
-            <h2>Schedule</h2>
+            <h2><i class="fal fa-calendar-alt"></i> Schedule</h2>
             <p>This timetable is provisional and subject to change</p>
           </div>
           <div class="section__tabulated">
-            <h3>Day 1</h3>
+            <h3><i class="fal fa-calendar"></i>Day 1</h3>
             <h4>Wednesday 28th November 2018</h4>
 
             <table>
@@ -111,13 +151,13 @@
               <tr><td>19:30</td><td>Symposium Reception/Dinner</td></tr>
             </table>
 
-            <h3>Day 2</h3>
+            <h3><i class="fal fa-calendar"></i>Day 2</h3>
             <h4>Thursday 29th November 2018</h4>
 
             <table>
               <tr><th>Time</th><th>Session</th></tr>
               <tr><td>09:00 - 09:20</td><td>Registration - Tea &amp; Coffee</td></tr>
-              <tr><td>09:20 - 10:00</td><td>Day 2 Keynote Speaker (Keynote TBC)</td></tr>
+              <tr><td>09:20 - 10:00</td><td>Panel Discussion</td></tr>
               <tr><td>10:00 - 11:20</td><td>Paper Presentation Group 4 (Tracks TBC)</td></tr>
               <tr><td>11:20 - 12:40</td><td>Paper Presentation Group 5 (Tracks TBC)</td></tr>
               <tr><td>12:40 - 13:40</td><td>Lunch & Poster Session</td></tr>
@@ -127,46 +167,37 @@
         </section>
 
         <!-- Registration -->
+        <a name="registration"></a>
         <section>
-          <a name="registration"></a>
           <div class="section__title">
-            <h2>Registration</h2>
-            <p>Registration is not yet open</p>
+            <h2><i class="fal fa-sign-in"></i> Registration</h2>
+            <p>Register to attend the symposium</p>
           </div>
-
+          <a href="#regsitration" class="button" disabled><i class="fal fa-external-link"></i>Registration Currently Unavailable</a>
           <div class="section__tabulated">
             <p>Registration covers meals and refreshments (excluding reception), access to the event and access to proceedings. Registration options include:</p>
-            <h3>Early Bird</h3>
-            <h4>Available until 15th August 2018</h4>
-
+            <h3><i class="fal fa-ticket"></i>Early Bird</h3>
+            <h4>Available until 20th September 2018</h4>
             <table>
               <tr><th>Ticket</th><th>Price</th></tr>
-              <tr><td>IEEE Member<sup>*</sup> (PGR)</td><td>£50</td></tr>
-              <tr><td>IEEE Member<sup>*</sup> (Professional)</td><td>£65</td></tr>
-              <tr><td>Non IEEE Member (PGR)</td><td>£60</td></tr>
-              <tr><td>Non IEEE Member (Professional)</td><td>£75</td></tr>
-              <tr><td>Student (MSc and BSc)</td><td>£50</td></tr>
+              <tr><td>Student (IEEE Member<small>*</small>)</td><td>£45</td></tr>
+              <tr><td>Student (Non-IEEE Member)</td><td>£50</td></tr>
+              <tr><td>Professional (IEEE Member<small>*</small>)</td><td>£55</td></tr>
+              <tr><td>Professional (Non IEEE Member)</td><td>£65</td></tr>
             </table>
-
             <p><em><sup>*</sup>IEEE members will need to provide their IEEE member number</em></p>
-
-            <h3>Standard</h3>
+            <h3><i class="fal fa-ticket"></i>Standard</h3>
             <h4>Available after early bird</h4>
-
             <table>
               <tr><th>Ticket</th><th>Price</th></tr>
-              <tr><td>IEEE Member<sup>*</sup> (PGR)</td><td>£70</td></tr>
-              <tr><td>IEEE Member<sup>*</sup> (Professional)</td><td>£80</td></tr>
-              <tr><td>Non IEEE Member (PGR)</td><td>£70</td></tr>
-              <tr><td>Non IEEE Member (Professional)</td><td>£80</td></tr>
-              <tr><td>Student (MSc and BSc)</td><td>£55</td></tr>
+              <tr><td>Student (IEEE Member<small>*</small>)</td><td>£50</td></tr>
+              <tr><td>Student (Non-IEEE Member)</td><td>£55</td></tr>
+              <tr><td>Professional (IEEE Member<small>*</small>)</td><td>£60</td></tr>
+              <tr><td>Professional (Non IEEE Member)</td><td>£70</td></tr>
             </table>
-
             <p><em><sup>*</sup>IEEE members will need to provide their IEEE member number</em></p>
-
-            <h3>Reception</h3>
+            <h3><i class="fal fa-utensils"></i>Reception</h3>
             <h4>Details to be confirmed</h4>
-
           </div>
         </section>
       </main>

@@ -1,0 +1,13 @@
+@import '../modules/buttons';
+
+.button {
+  @include button;
+
+  &__blue {
+    @include button__blue;
+  }
+
+  &[disabled] {
+    @include button__disabled;
+  }
+}
