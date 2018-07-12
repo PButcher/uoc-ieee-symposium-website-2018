@@ -1,5 +1,5 @@
 {
-  "name": "uoc-ieee-symposium-website-2018-2",
+  "name": "uoc-ieee-symposium-website-2018",
   "version": "1.0.0",
   "description": "UoC IEEE Symposium Website 2018",
   "main": "index.js",
@@ -13,8 +13,7 @@
     "sass": "node-sass sass/style.scss --output build/assets/css/",
     "prebuild": "npm run clean",
     "build": "npm run static && npm run sass",
-    "preserve": "npm run build",
-    "live": "rsync -av build/ peter@pbutcher.uk:/var/www/researchsymposium/hosted/ieeeyp/"
+    "preserve": "npm run build"
   },
   "keywords": [],
   "author": "",
