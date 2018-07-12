@@ -1,0 +1,63 @@
+@mixin callout {
+  border-radius: 4px;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+
+  @media(max-width: $m-nav) {
+    padding: 5px;
+  }
+}
+
+@mixin callout__event {
+  background-color: $c-callout-event-bg;
+  color: $c-callout-event-text;
+  overflow: auto;
+}
+
+@mixin callout__icon {
+  float: left;
+  height: 50px;
+  width: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 1.4em;
+  overflow: auto;
+}
+
+@mixin callout__body {
+  float: left;
+  overflow: auto;
+  padding: 6px 0px;
+
+  @media(max-width: $m-nav) {
+    padding: 10px 0px 2px 0px;
+  }
+
+  strong {
+    font-size: 1em;
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+@mixin callout__button {
+  float: right;
+
+  span {
+    margin-left: 4px;
+
+    @media(max-width: $m-nav) {
+      display: none;
+    }
+  }
+
+  i {
+    @media(max-width: $m-nav) {
+      margin-right: 0px;
+    }
+  }
+}

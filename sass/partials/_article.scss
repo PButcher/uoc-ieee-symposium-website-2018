@@ -1,0 +1,5 @@
+@import '../modules/article';
+
+article {
+  @include article;
+}

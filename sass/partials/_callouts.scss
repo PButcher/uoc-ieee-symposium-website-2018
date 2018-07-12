@@ -1,0 +1,21 @@
+@import '../modules/callouts';
+
+.callout {
+  @include callout;
+
+  &__event {
+    @include callout__event;
+  }
+
+  &__icon {
+    @include callout__icon;
+  }
+
+  &__body {
+    @include callout__body;
+  }
+
+  &__button {
+    @include callout__button;
+  }
+}

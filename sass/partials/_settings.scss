@@ -16,8 +16,9 @@ $w-logo: calc(400px * #{$s-logo});
 $h-logo: calc(76px * #{$s-logo});
 
 // Nav
-$c-text: #151515;
+$c-nav-text: #444;
 $c-nav-button: rgba(0,0,0,0.05);
+$c-nav-button-hover: rgba(0,0,0,0.3);
 
 // Buttons
 $c-button-blue: #006CB5;
@@ -25,3 +26,7 @@ $c-button-blue-hover: #0179CA;
 
 // Drawer
 $w-drawer: 280px;
+
+// Callouts
+$c-callout-event-bg: #FFF6D7;
+$c-callout-event-text: #B19C52;

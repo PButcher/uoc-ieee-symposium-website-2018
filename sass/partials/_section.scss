@@ -3,14 +3,38 @@
 section {
   @include section;
 
+  &.section__hero {
+    @include section__hero;
+
+    &-caption {
+      @include section__hero-caption;
+    }
+  }
+
   .section {
+
+    &__hero-caption {
+      @include section__hero-caption;
+    }
 
     &__title {
       @include section__title;
+
+      &-tidbits {
+        @include section__title-tidbits;
+      }
     }
 
     &__tabulated {
       @include section__tabulated;
+
+      &-col {
+        @include section__tabulated-col;
+      }
+    }
+
+    &__grid {
+      @include section__grid;
     }
   }
 }

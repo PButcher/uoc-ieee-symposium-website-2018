@@ -5,6 +5,18 @@
 
   &__blue {
     @include button__blue;
+
+    &-outline {
+      @include button__blue-outline;
+    }
+  }
+
+  &__white-outline {
+    @include button__white-outline;
+  }
+
+  &__event {
+    @include button__event;
   }
 
   &[disabled] {

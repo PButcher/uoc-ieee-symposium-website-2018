@@ -12,6 +12,10 @@ header {
 
     &__nav {
       @include header__nav;
+
+      &-top {
+        @include header__nav-top;
+      }
     }
 
     &__nav-mobile {

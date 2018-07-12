@@ -5,15 +5,14 @@
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
-    "node-sass": "^3.6.0"
+    "node-sass": "^4.9.1"
   },
   "scripts": {
     "clean": "rm -rf build && mkdir -p build",
     "static": "cp -r static/* build",
-    "sass": "node-sass sass/style.scss --output build/css/",
-    "js": "cp -r js build/js/",
+    "sass": "node-sass sass/style.scss --output build/assets/css/",
     "prebuild": "npm run clean",
-    "build": "npm run static && npm run sass && npm run js",
+    "build": "npm run static && npm run sass",
     "preserve": "npm run build",
     "live": "rsync -av build/ peter@pbutcher.uk:/var/www/researchsymposium/hosted/ieeeyp/"
   },

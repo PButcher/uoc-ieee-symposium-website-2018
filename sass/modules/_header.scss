@@ -1,10 +1,10 @@
 @mixin header {
   overflow: auto;
   padding: 15px 0px;
-  background-color: rgba(255,255,255,0.9);
-  position: -webkit-sticky;
-  position: sticky;
-  top: -1px;
+  background-color: rgba(255,255,255,1);
+  // position: -webkit-sticky;
+  // position: sticky;
+  // top: 0px;
 }
 
 @mixin header__logo {
@@ -14,6 +14,7 @@
   background-size: $w-logo;
   background-repeat: no-repeat;
   float: left;
+  display: block;
 
   @media(max-width: $m-nav) {
     width: calc(#{$w-logo / 1.25});
@@ -22,8 +23,7 @@
   }
 }
 
-@mixin header__nav {
-  float: right;
+@mixin header__nav-common {
   box-sizing: border-box;
 
   a, label {
@@ -32,7 +32,9 @@
     display: block;
     box-sizing: border-box;
     float: left;
-    margin: 9px 5px;
+    margin: 9px 15px;
+    font-weight: 300;
+    border-bottom: solid 2px $c-nav-button;
 
     &:first-child {
       margin-left: 0px;
@@ -42,13 +44,11 @@
       margin-right: 0px;
     }
 
-    padding: 0px 10px;
-    color: $c-text;
+    color: $c-nav-text;
     text-decoration: none;
-    border-radius: 4px;
 
-    &:hover {
-      background-color: $c-nav-button;
+    &:hover, &.selected {
+      border-bottom: solid 2px $c-nav-button-hover;
     }
 
     @media(max-width: $m-nav) {
@@ -61,20 +61,47 @@
   }
 }
 
-@mixin header__nav-mobile {
-  @include header__nav;
+@mixin header__nav {
+  @include header__nav-common;
 
+  clear: both;
+}
+
+@mixin header__nav-top {
+
+  float: right;
 
   @media(max-width: $m-nav) {
+    display: none;
+  }
+}
+
+@mixin header__nav-mobile {
+  @include header__nav-common;
+
+  @media(max-width: $m-nav) {
+    float: right;
     display: block;
 
     a, label {
       text-align: center;
+      border-bottom: none;
+      border-radius: 4px;
+      padding: 0px 10px;
+
+      &:hover, &.selected {
+        border-bottom: none;
+        background-color: $c-nav-button;
+      }
 
       i {
         margin-right: 0px;
         width: 20px;
       }
+    }
+
+    a {
+      text-align: left;
     }
   }
 }
@@ -84,8 +111,8 @@
 
   @media(max-width: $m-nav) {
     &:checked + .drawer {
-      left: 0px;
-      transition: left .25s ease-in-out;
+      transform: translateX(305px);
+      transition: transform .25s ease-in-out;
     }
   }
 }
@@ -110,7 +137,8 @@
   width: $w-drawer;
   top: 0px;
   left: -305px;
-  transition: left .25s ease-in-out;
+  transform: translateX(0px);
+  transition: transform .25s ease-in-out;
   height: 100%;
   overflow-y: scroll;
   background-color: #FFF;
@@ -122,11 +150,7 @@
   a {
     color: #000;
     float: none;
-
-  }
-
-  @media(max-width: $m-nav) {
-
+    padding-left: 40px;
   }
 }
 

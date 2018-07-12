@@ -2,8 +2,9 @@
   height: 75px;
   line-height: 75px;
   overflow: auto;
+  margin-top: 25px;
 
-  @media(max-width: $m-nav) {
+  @media(max-width: 600px) {
     height: 150px;
   }
 }
@@ -11,7 +12,7 @@
 @mixin footer__left {
   float: left;
 
-  @media(max-width: $m-nav) {
+  @media(max-width: 600px) {
     float: none
   }
 }
@@ -19,18 +20,29 @@
 @mixin footer__right {
   float: right;
 
-  @media(max-width: $m-nav) {
+  @media(max-width: 600px) {
     float: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    align-content: flex-start;
   }
 }
 
 @mixin footer__icon {
+  line-height: 75px;
   display: block;
-  width: 281px;
+  width: calc(281px / 1.5);
   height: 75px;
   background-image: url('../img/rsymuk.png');
-  background-size: 281px 75px;
+  background-size: 100%;
+  background-position: center center;
   background-repeat: no-repeat;
+
+  @media(max-width: 600px) {
+    margin: 0 auto;
+  }
 }
 
 @mixin footer__link {
