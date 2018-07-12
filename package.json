@@ -12,8 +12,7 @@
     "static": "cp -r static/* build",
     "sass": "node-sass sass/style.scss --output build/assets/css/",
     "prebuild": "npm run clean",
-    "build": "npm run static && npm run sass",
-    "preserve": "npm run build"
+    "build": "npm run static && npm run sass"
   },
   "keywords": [],
   "author": "",
