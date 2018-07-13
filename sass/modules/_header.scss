@@ -32,7 +32,7 @@
     display: block;
     box-sizing: border-box;
     float: left;
-    margin: 9px 15px;
+    margin: 9px 10px;
     font-weight: 300;
     border-bottom: solid 2px $c-nav-button;
 
@@ -59,6 +59,18 @@
   @media(max-width: $m-nav) {
     display: none;
   }
+
+  a.header__nav-icon {
+    border-bottom: none;
+    float: right;
+    font-size: 1.2em;
+    text-align: center;
+    border-bottom: none;
+    border-radius: 4px;
+    padding: 0px 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
 }
 
 @mixin header__nav {
@@ -67,9 +79,25 @@
   clear: both;
 }
 
+@mixin header__nav-icon {
+
+  i {
+    margin-right: 0px;
+  }
+
+  &:hover {
+    border-bottom: none;
+    background-color: $c-nav-button;
+  }
+}
+
 @mixin header__nav-top {
 
   float: right;
+
+  a:last-child {
+    margin-right: 0px;
+  }
 
   @media(max-width: $m-nav) {
     display: none;
