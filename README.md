@@ -9,7 +9,7 @@ Website for the inaugural [IEEE YP UK & Ireland](http://www.ieeeukiyp.org) Secti
 ## Install
 
 ```
-npm run Install
+npm run install
 ```
 
 Install's project dependencies:
