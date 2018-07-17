@@ -9,7 +9,12 @@ section {
     &-caption {
       @include section__hero-caption;
     }
+    
+    &.section__hero-mobile {
+      @include section__hero-mobile;
+    }
   }
+
 
   .section {
 
