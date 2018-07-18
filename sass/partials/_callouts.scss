@@ -7,6 +7,10 @@
     @include callout__event;
   }
 
+  &__advert {
+    @include callout__advert;
+  }
+
   &__icon {
     @include callout__icon;
   }

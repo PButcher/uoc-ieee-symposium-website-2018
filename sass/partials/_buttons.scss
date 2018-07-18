@@ -19,6 +19,10 @@
     @include button__event;
   }
 
+  &__advert {
+    @include button__advert;
+  }
+
   &[disabled] {
     @include button__disabled;
   }

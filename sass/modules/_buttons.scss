@@ -6,7 +6,7 @@
   padding: 0px 16px;
   text-decoration: none;
   text-transform: uppercase;
-  font-weight: 400;
+  font-weight: 500;
   margin: 5px 10px 5px 0px;
 }
 
@@ -58,5 +58,25 @@
   &:hover {
     background-color: rgba(255,255,255,0.5);
     color: $c-callout-event-text;
+  }
+
+  &:last-child {
+    margin-right: 6px;
+  }
+}
+
+@mixin button__advert {
+  height: 36px;
+  line-height: 36px;
+  border: solid 2px $c-callout-advert-text;
+  color: $c-callout-advert-text;
+
+  &:hover {
+    background-color: rgba(255,255,255,0.5);
+    color: $c-callout-advert-text;
+  }
+
+  &:last-child {
+    margin-right: 6px;
   }
 }

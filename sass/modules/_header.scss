@@ -52,8 +52,12 @@
     color: $c-nav-text;
     text-decoration: none;
 
-    &:hover, &.selected {
+    &:hover {
       border-bottom: solid 2px $c-nav-button-hover;
+    }
+
+    &.selected {
+      border-bottom: solid 2px $c-button-blue-hover;
     }
 
     @media(max-width: $m-nav) {

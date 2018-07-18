@@ -4,7 +4,7 @@
   width: 100%;
   box-sizing: border-box;
 
-  @media(max-width: $m-nav) {
+  @media(max-width: 700px) {
     padding: 5px;
   }
 }
@@ -13,6 +13,31 @@
   background-color: $c-callout-event-bg;
   color: $c-callout-event-text;
   overflow: auto;
+}
+
+@mixin callout__advert {
+  background-color: $c-callout-advert-bg;
+  color: $c-callout-advert-text;
+  overflow: auto;
+
+  @media(max-width: 450px) {
+    .callout__button {
+      margin-left: 50px;
+      clear: both;
+      float: none;
+    }
+
+    .button {
+      span {
+        display: inline;
+      }
+      &:last-child {
+        span {
+          display: none;
+        }
+      }
+    }
+  }
 }
 
 @mixin callout__icon {
@@ -30,7 +55,7 @@
   overflow: auto;
   padding: 6px 0px;
 
-  @media(max-width: $m-nav) {
+  @media(max-width: 700px) {
     padding: 10px 0px 2px 0px;
   }
 
@@ -50,13 +75,13 @@
   span {
     margin-left: 4px;
 
-    @media(max-width: $m-nav) {
+    @media(max-width: 700px) {
       display: none;
     }
   }
 
   i {
-    @media(max-width: $m-nav) {
+    @media(max-width: 700px) {
       margin-right: 0px;
     }
   }
