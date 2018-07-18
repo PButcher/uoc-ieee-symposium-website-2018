@@ -13,6 +13,10 @@
   background-color: $c-callout-event-bg;
   color: $c-callout-event-text;
   overflow: auto;
+
+  @media(max-width: $m-nav) {
+    margin-top: 15px;
+  }
 }
 
 @mixin callout__advert {
