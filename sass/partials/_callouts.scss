@@ -11,6 +11,10 @@
     @include callout__advert;
   }
 
+  &__announcement {
+    @include callout__announcement;
+  }
+
   &__icon {
     @include callout__icon;
   }

@@ -80,3 +80,19 @@
     margin-right: 6px;
   }
 }
+
+@mixin button__announcement {
+  height: 36px;
+  line-height: 36px;
+  border: solid 2px $c-callout-announcement-text;
+  color: $c-callout-announcement-text;
+
+  &:hover {
+    background-color: rgba(255,255,255,0.5);
+    color: $c-callout-announcement-text;
+  }
+
+  &:last-child {
+    margin-right: 6px;
+  }
+}

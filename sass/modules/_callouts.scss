@@ -44,6 +44,31 @@
   }
 }
 
+@mixin callout__announcement {
+  background-color: $c-callout-announcement-bg;
+  color: $c-callout-announcement-text;
+  overflow: auto;
+
+  @media(max-width: 450px) {
+    .callout__button {
+      margin-left: 50px;
+      clear: both;
+      float: none;
+    }
+
+    .button {
+      span {
+        display: inline;
+      }
+      &:last-child {
+        span {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
 @mixin callout__icon {
   float: left;
   height: 50px;

@@ -23,6 +23,10 @@
     @include button__advert;
   }
 
+  &__announcement {
+    @include button__announcement;
+  }
+
   &[disabled] {
     @include button__disabled;
   }
